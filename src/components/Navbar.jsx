@@ -1,7 +1,24 @@
-import { domine, albertSans } from "@/app/layout";
 const Navbar = ()=>{
 
 //aca va el js
+const itemsNav = [
+    {
+        name: 'Home',
+        link: '/',
+    },
+    {
+        name: 'Categorías',
+        link: '/categorias',
+    },
+        {
+        name: 'Recetas',
+        link: '/recetas',
+    },
+    {
+        name: 'Contacto',
+        link: '/contacto',
+    },
+]
 
 //y aca lo que se mezcla en html
 //preguntas: imagenes, el no wrap que se le aplica a todo
@@ -11,10 +28,12 @@ const Navbar = ()=>{
                 <p>logo</p>
                 <p className="font-serif">Mis recetas</p>
             </div>
-            <nav className="flex gap-16">
-                <p>Categorías</p>
-                <p>Recetas</p>
-                <p>Contacto</p>
+            <nav>
+                <ul className="flex gap-8">
+                    {itemsNav.map((item, index) => (
+                        <li key={index}>{item.name}</li>
+                    ))}
+                </ul>
             </nav>
         </header>
 
