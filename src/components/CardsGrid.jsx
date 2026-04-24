@@ -1,25 +1,7 @@
 import Card from "./Card"
+import gridItems from "@/data/dummy"
 
 const CardsGrid = () => {
-
-    const gridItems = [
-        {
-            name: 'Pizza',
-            ranking: 8
-        },
-        {
-            name: 'Hamburguesa',
-            ranking: 10
-        },
-        {
-            name: 'Sushi',
-            ranking: 7
-        },
-        {
-            name: 'Helado',
-            ranking: 9
-        },
-    ]
 
   return (
 
