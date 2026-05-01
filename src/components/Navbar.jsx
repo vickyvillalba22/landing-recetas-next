@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Navbar = ()=>{
 
 //aca va el js
@@ -25,7 +27,14 @@ const itemsNav = [
     return(
         <header className="flex w-full justify-between h-[10vh] content-center flex-wrap">
             <div className="w-1/3 flex gap-8">
-                <p>logo</p>
+                <Image
+                
+                    src={'/public/imgs/logo.png'}
+                    width={100}
+                    height={100}
+                    alt='logo'
+
+                />
                 <p className="font-serif">Mis recetas</p>
             </div>
             <nav>

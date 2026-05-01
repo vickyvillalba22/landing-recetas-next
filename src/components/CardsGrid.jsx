@@ -1,15 +1,14 @@
 import Card from "./Card"
-import gridItems from "@/data/dummy"
 
-const CardsGrid = () => {
+const CardsGrid = ({items}) => {
 
   return (
 
     <div className="grid grid-cols-3 gap-4">
 
-        {gridItems.map((item, index)=>(
+        {items.map((item, index)=>(
 
-            <Card key={index} name={item.name} />
+            <Card key={index} name={item.name} image={item.image} />
 
         ))}
 

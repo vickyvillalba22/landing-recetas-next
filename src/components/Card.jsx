@@ -2,11 +2,17 @@
 
 import { useState } from "react"
 
-const Card = ({name}) => {
+// la gracia del componente de image es que las va cargando a medida que aparecen en el viewport. le podemos poner un placeholder también.
+import Image from "next/image"
+
+//ruta para ir a las comidas
+import Link from "next/link"
+
+const Card = ({name, image, id}) => {
 
     const [likes, setLikes] = useState(0)
     const [cardColor, setCardColor] = useState('light')
-    const [showName, setShowName] = useState(false)
+    const [showName, setShowName] = useState(true)
 
     const handleLikes = ()=>{
         setLikes(likes+1)
@@ -30,6 +36,19 @@ const Card = ({name}) => {
             <button onClick={handleColor}>Toggle color</button>
 
             <button onClick={handleShowName}>Toggle name</button>
+
+            <Image
+            
+                src={image}
+                width={100}
+                height={200}
+                alt={name}
+
+            />
+
+            <button>
+                <Link href={`/src/app/recipe/${id}`}>Ver receta</Link>
+            </button>
 
         </div>
         
