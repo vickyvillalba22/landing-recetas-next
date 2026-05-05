@@ -13,6 +13,8 @@ const RecipeContainer = ({id}) => {
 
         try {
             const response = await axios.get(`https://dummyjson.com/recipe/${id}`)
+            console.log(response);
+            
             const data = response.data
             setItem(data)
         } catch (error) {
