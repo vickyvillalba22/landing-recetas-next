@@ -29,10 +29,11 @@ const itemsNav = [
             <div className="w-1/3 flex gap-8">
                 <Image
                 
-                    src={'/public/imgs/logo.png'}
+                    src={'/imgs/logo.png'}
                     width={100}
                     height={100}
                     alt='logo'
+                    loading="eager"
 
                 />
                 <p className="font-serif">Mis recetas</p>

@@ -10,6 +10,8 @@ import Link from "next/link"
 
 const Card = ({name, image, id}) => {
 
+    console.log(id);
+
     const [likes, setLikes] = useState(0)
     const [cardColor, setCardColor] = useState('light')
     const [showName, setShowName] = useState(true)
@@ -41,13 +43,13 @@ const Card = ({name, image, id}) => {
             
                 src={image}
                 width={100}
-                height={200}
+                height={100}
                 alt={name}
 
             />
 
             <button>
-                <Link href={`/src/app/recipe/${id}`}>Ver receta</Link>
+                <Link href={`/recipe/${id}`}>Ver receta</Link>
             </button>
 
         </div>

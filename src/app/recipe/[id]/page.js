@@ -3,10 +3,16 @@ import React from 'react'
 
 const page = async ({params}) => {
 
-    const { id } = await params
+  console.log(params);
+  
+  const { id } = await params
 
   return (
-    <RecipeContainer id={id} />
+    <div>
+      <RecipeContainer id={id} />
+    </div>
+
+    
   )
 }
 
